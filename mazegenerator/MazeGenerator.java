@@ -13,10 +13,10 @@ import mycomponents.*;
 public class MazeGenerator extends JFrame {
     private static final long serialVersionUID = 1L;
 
-    private TitleLabel = "Maze Game";
+    private TitleLabel titleLabel= new TitleLabel("Maze Game");
 
     MazeGenerator()  {
-        void initGUI();
+        initGUI();
 
         setTitle("Maze Generator");
         setResizable(false);
@@ -27,7 +27,7 @@ public class MazeGenerator extends JFrame {
     }
 
     private void initGUI() {
-        add(TitleLabel, BorderLayout.PAGE_START);
+        add(titleLabel, BorderLayout.PAGE_START);
     }
 
     public static void main(String[] args) {
