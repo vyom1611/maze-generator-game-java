@@ -2,16 +2,18 @@ package mazegenerator;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Color;
 
 import javax.swing.JFrame;
 import javax.swing.UIManager;
+import javax.swing.JPanel;
 
 import mycomponents.*;
 
 public class MazeGenerator extends JFrame {
     private static final long serialVersionUID = 1L;
 
-    private mainTitle = "Maze Game";
+    private TitleLabel = "Maze Game";
 
     MazeGenerator()  {
         void initGUI();
@@ -25,8 +27,14 @@ public class MazeGenerator extends JFrame {
     }
 
     private void initGUI() {
-        add(mainTitle, BorderLayout.PAGE_START);
+        add(TitleLabel, BorderLayout.PAGE_START);
     }
 
-
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MazeGenerator();
+            }
+        });
+    }
 }
